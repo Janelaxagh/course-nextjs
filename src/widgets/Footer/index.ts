@@ -1,0 +1,1 @@
+export { FooterWidgets } from './FooterWidgets'
