@@ -1,0 +1,1 @@
+export { FooterEntities } from './FooterEntities'
