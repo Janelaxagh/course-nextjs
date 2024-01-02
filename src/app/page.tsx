@@ -1,11 +1,9 @@
-import { CoursesList } from '@/features/courses-list/pub/courses-list'
-import { CreateCourseForm } from '@/features/courses-list/pub/create-course-form'
+import { MainSlider } from '@/widgets/MainSlider'
 
-export default async function Home() {
+export default async function MainPage() {
   return (
     <main className='flex min-h-screen flex-col p-8'>
-      <CreateCourseForm revalidatePagePath='/' className='w-[300px] mb-10' />
-      <CoursesList revalidatePagePath='/' />
+      <MainSlider />
     </main>
   )
 }
