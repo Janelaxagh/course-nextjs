@@ -2,6 +2,8 @@ import { cn } from '@/shared/ui/utils'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './global.css'
+import { HeaderWidgets } from '@/widgets/Header'
+import { FooterWidgets } from '@/widgets/Footer'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -16,7 +18,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>{children}</body>
+      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+        <HeaderWidgets />
+        {children}
+        <FooterWidgets />
+      </body>
     </html>
   )
 }
